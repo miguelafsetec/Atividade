@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projeto
+namespace Projetinho
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Pessoa pessoa = new Pessoa();
-            pessoa.cadastro();
+            paciente paciente = new paciente();
+            paciente.cadastro();
         }
     }
 }
