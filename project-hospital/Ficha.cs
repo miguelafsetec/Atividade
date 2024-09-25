@@ -15,7 +15,7 @@ namespace project_hospital
             Fila fila = new Fila();
             do
             {
-
+                Console.Clear();
                 Console.WriteLine("Escolha uma opção:");
                 Console.WriteLine("1. Cadastrar paciente");
                 Console.WriteLine("2. Inserir paciente na fila");
