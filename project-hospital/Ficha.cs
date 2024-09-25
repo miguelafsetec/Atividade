@@ -67,7 +67,7 @@ namespace project_hospital
                         if (b == 1)
                         {
                             fila.atendeFila();
-                            Console.w
+              
 
                         }
                         else { }
