@@ -1,4 +1,5 @@
-﻿using System;
+﻿using llbb;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,10 @@ namespace Projetinho
     {
         static void Main(string[] args)
         {
-            paciente paciente = new paciente();
-            paciente.cadastro();
+            
+            ficha ficha = new ficha();
+            ficha.cadastro();
+            Console.ReadKey();
         }
     }
 }
