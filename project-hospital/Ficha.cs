@@ -16,13 +16,13 @@ namespace project_hospital
             do
             {
                 Console.Clear();
-                Console.WriteLine("Escolha uma opção:");
-                Console.WriteLine("1. Cadastrar paciente");
-                Console.WriteLine("2. Inserir paciente na fila");
-                Console.WriteLine("3. Listar fila de pacientes");
-                Console.WriteLine("4. Incluir paciente prioritário");
-                Console.WriteLine("5. Atender paciente");
-                Console.WriteLine("q. Sair");
+                Console.WriteLine("Escolha uma das opções abaixo");
+                Console.WriteLine("1. Cadastrar o paciente");
+                Console.WriteLine("2. colocar paciente na fila");
+                Console.WriteLine("3. Listar os pacientes que estão na fila");
+                Console.WriteLine("4. Incluir os pacientes prioritários");
+                Console.WriteLine("5. Atender os pacientes ");
+                Console.WriteLine("Digite q para sair ");
                 opcao = int.Parse(Console.ReadLine());
                 Console.WriteLine();
 
