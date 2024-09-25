@@ -5,9 +5,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Projetinho
+namespace project_hospital
 {
-    internal class paciente
+    internal class Paciente
     {
         public string nome;
         public string CPF;
@@ -21,12 +21,34 @@ namespace Projetinho
         public string telefone;
         public int connt;
 
+        public virtual string cadastroNome()
+        {
+            Console.WriteLine("Digite seu nome Completo");
+            this.nome = Console.ReadLine();
+            return this.nome;
+        }
+
+        public virtual bool cadastroPrioridade()
+        {
+            Console.WriteLine("Você tem alguma deficiência? sim [y] não [n]");
+            string x = Console.ReadLine();
+
+            if (x == "y")
+            {
+                this.prioridade = true;
+            }
+            else
+            {
+                this.prioridade = false;
+            }
+            return this.prioridade;
+        }
 
 
         public virtual void cadastro()
         {
-            Console.WriteLine("Digite seu nome Completo");
-            nome = Console.ReadLine();
+
+            cadastroNome();
 
             do
             {
@@ -67,6 +89,11 @@ namespace Projetinho
                     Console.WriteLine("ERRO!!! Digite novamente.");
                 }
             } while (!Validação_do_email(email));
+
+            cadastroPrioridade();
+
+
+
             do
             {
                 Console.WriteLine("Digite seu telefone celular");
@@ -79,6 +106,9 @@ namespace Projetinho
 
             Console.WriteLine($"Nome completo: {nome} \nCPF: {CPF} \nEndereço: {Endereço} \nIdade: {idade} \nData de nascimento: {dia}/{mes}/{Ano_de_Nascimento} \nEmail para contato: {email} \nPrioridade: {prioridade} \nTelefone: {telefone} \nSeus dados estão corretos? Digite 1) sim \n 2) não \n ");
             connt = int.Parse(Console.ReadLine());
+
+
+
             switch (connt)
             {
                 case 1:
@@ -122,8 +152,6 @@ namespace Projetinho
                             email = Console.ReadLine();
                         } while (!Validação_do_email(email));
 
-                        Console.WriteLine("Você tem alguma deficiência?");
-                        prioridade = bool.Parse(Console.ReadLine());
 
                         do
                         {
@@ -154,5 +182,8 @@ namespace Projetinho
             return telefone.Length == 11 && long.TryParse(telefone, out _);
         }
 
+
+
     }
 }
+

@@ -1,18 +1,20 @@
-﻿using llbb;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projetinho
+namespace project_hospital
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
-            ficha ficha = new ficha();
+
+            Ficha ficha = new Ficha();
+
+            Console.WriteLine("Sistema Hospital");
             ficha.cadastro();
             Console.ReadKey();
         }
